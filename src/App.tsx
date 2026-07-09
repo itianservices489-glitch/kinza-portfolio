@@ -431,9 +431,21 @@ export default function App() {
       {/* ── NAVBAR ── */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#about" onClick={() => scrollTo("#about")} className="text-xl font-bold bg-gradient-to-r from-violet-600 to-cyan-500 bg-clip-text text-transparent">
-            KM<span className="text-slate-400">.</span>
-          </a>
+          <a
+  href="#about"
+  onClick={() => scrollTo("#about")}
+  className="flex items-center gap-3"
+>
+  <img
+    src="/images/logo.jpg"
+    alt="Kinza Logo"
+    className="w-10 h-10 rounded-full"
+  />
+
+  <span className="text-2xl font-bold text-white">
+    Kinza
+  </span>
+</a>
           {/* Desktop Nav */}
           <ul className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((n) => (
@@ -508,20 +520,36 @@ export default function App() {
             </div>
             {/* CTA */}
             <div className="flex flex-wrap gap-3">
-              <button onClick={() => scrollTo("#projects")} className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-cyan-500 text-white rounded-xl font-medium hover:shadow-xl hover:shadow-violet-500/30 transition-all hover:-translate-y-0.5">
-                View My Work <ArrowRight className="w-4 h-4" />
-              </button>
-              <button onClick={() => scrollTo("#contact")} className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl font-medium hover:bg-white/20 transition-all">
-                <Mail className="w-4 h-4" /> Contact Me
-              </button>
-            </div>
-          </div>
+
+  <button
+    onClick={() => scrollTo("#projects")}
+    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-cyan-500 text-white rounded-xl font-medium hover:shadow-xl hover:shadow-violet-500/30 transition-all hover:-translate-y-0.5"
+  >
+    View My Work <ArrowRight className="w-4 h-4" />
+  </button>
+
+  <button
+    onClick={() => scrollTo("#contact")}
+    className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl font-medium hover:bg-white/20 transition-all"
+  >
+    <Mail className="w-4 h-4" /> Contact Me
+  </button>
+
+  <a
+    href="/kinzacv.pdf"
+    download
+    className="flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-xl font-medium hover:bg-emerald-700 transition-all"
+  >
+    📄 Download CV
+  </a>
+</div>
+</div>
 
           {/* Profile Image */}
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl shadow-violet-900/50">
-                <img src="/images/profile.jpg" alt="Kinza Mushtaq" className="w-full h-full object-cover" />
+                <img src="/images/profile.jpg.jpeg" alt="Kinza Mushtaq" className="w-full h-full object-cover" />
               </div>
               {/* Floating badges */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-4 py-2 flex items-center gap-2">
