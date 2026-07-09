@@ -437,10 +437,10 @@ export default function App() {
   className="flex items-center gap-3"
 >
   <img
-    src="/images/logo.jpg"
-    alt="Kinza Logo"
-    className="w-10 h-10 rounded-full"
-  />
+  src="./images/logo.jpg"
+  alt="Kinza Logo"
+  className="w-10 h-10 rounded-full"
+/>
 
   <span className="text-2xl font-bold text-white">
     Kinza
@@ -549,7 +549,11 @@ export default function App() {
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl shadow-violet-900/50">
-                <img src="/images/profile.jpg.jpeg" alt="Kinza Mushtaq" className="w-full h-full object-cover" />
+                <img
+  src="./images/profile.jpg.jpeg"
+  alt="Kinza Mushtaq"
+  className="w-full h-full object-cover"
+/>
               </div>
               {/* Floating badges */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-4 py-2 flex items-center gap-2">
